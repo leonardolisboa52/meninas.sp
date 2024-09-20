@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(parque.jpg);
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo{
+    top: 100px;
+    left: 35%;
+    width: 350px;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    color: blue;
+    border: 2px solid red;
+    border-radius: 50px;
+    background-color: lightpink;
+}
+
+.corredor{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    background: url(mega.png);
+    width: calc(1265px / 10);
+    height: 125px;
+    animation: megaman .5s steps(10) infinite,
+               mover 5s linear infinite;
+}
+
+.corredor1{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    background: url(correr1.png);
+    width: calc(638px / 8);
+    height: 99px;
+    animation: megaman .5s steps(8) infinite,
+               mover 5s linear infinite;
+}
+
+@keyframes megaman{
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1265px;
+    }
+}
+
+@keyframes mover{
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(1300px);
+    }
+}
